@@ -49,11 +49,25 @@ The source datasets remain available from their original repositories.
 
 ## Reproducibility
 
-The Python notebooks and supporting scripts in this repository are intended to document the reconstruction methods and experimental evaluation.
+The reconstruction methods and supplementary evaluation experiments are implemented within a single Jupyter notebook provided in this repository.
 
-To reproduce the study, obtain the source datasets from the links above and follow the notebook instructions.
+The notebook covers the following analyses:
 
-Additional environment specifications, execution instructions, and evaluation scripts will be documented as the repository is finalised.
+1. Classical interpolation and GraphSAGE-based reconstruction of masked EBSD orientations.
+2. Symmetry-aware crystallographic disorientation evaluation.
+3. Reconstruction performance across orientation-connected component sizes.
+4. Local disorientation and kernel average misorientation (KAM) evaluation.
+5. Reconstruction under spatially correlated missingness.
+
+### Running the notebook
+
+1. Download the notebook from this repository or open it in Google Colab.
+2. Install the dependencies listed in `requirements.txt`.
+3. Download the original EBSD datasets from the Zenodo and Mendeley Data repositories linked above.
+4. Update the dataset file paths in the notebook to point to the downloaded CTF files.
+5. Execute the relevant notebook sections to reproduce the reconstruction and evaluation analyses.
+
+The clustered-missingness experiment evaluates the three classical methods only; GraphSAGE was not evaluated under clustered missingness.
 
 ## Citation
 
